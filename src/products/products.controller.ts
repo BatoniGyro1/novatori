@@ -9,7 +9,7 @@ export class ProductsController {
   constructor(private readonly productsService: ProductsService) {}
 
   @Get()
-  getmethod(@Query() query : CreateProductDto) : string {
+  getmethod(@Body() query : CreateProductDto) : string {
     return this.productsService.getmethod(query)
   }
 

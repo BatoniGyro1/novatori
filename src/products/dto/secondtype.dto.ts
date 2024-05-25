@@ -1,3 +1,5 @@
+import { isString } from "class-validator";
+
 export class Secondtype {
     category : string;
     color : string;
