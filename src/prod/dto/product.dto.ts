@@ -1,10 +1,10 @@
-import { IsArray, IsNumber, IsPositive, IsString, IsUrl, Max, Min } from "class-validator";
+import { IsArray, IsNumber, IsPositive, IsString, IsUrl, Max, MaxLength, Min, MinLength } from "class-validator";
 import { isFloat32Array } from "util/types";
 
 export class product {
     @IsString()
-    @Min(3)
-    @Max(255)
+    @MinLength(3)
+    @MaxLength(255)
     title: string;
 
     @IsPositive()
@@ -12,7 +12,7 @@ export class product {
     price: number;
 
     @IsString()
-    @Min(150)
+    @MinLength(150)
     description: string
 
     @IsArray()
@@ -22,5 +22,5 @@ export class product {
     @IsUrl()
     image: string;
 
-    
+
 }

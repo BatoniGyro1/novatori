@@ -1,15 +1,15 @@
-import { IsEmail, IsEnum, IsNumber, IsOptional, IsPhoneNumber, IsString, Max, Min, isIn } from "class-validator";
+import { IsEmail, IsEnum, IsNumber, IsOptional, IsPhoneNumber, IsString, Max, MaxLength, Min, MinLength, isIn } from "class-validator";
 
 
 export class CreateProdDto{
     @IsString()
-    @Max(15)
-    @Min(3)
+    @MaxLength(15)
+    @MinLength(3)
     firstName: string;
 
     @IsString()
-    @Max(15)
-    @Min(3)
+    @MaxLength(15)
+    @MinLength(3)
     lastName: string;
 
     @IsEmail()
@@ -22,7 +22,7 @@ export class CreateProdDto{
 
     @IsPhoneNumber()
     phone: number
-
+    
     @IsEnum(['male' , 'female'])
     gender: 'male' | 'female';
 
