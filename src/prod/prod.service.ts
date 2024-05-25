@@ -7,11 +7,24 @@ export class ProdService {
     student() : boolean{
       return true;
     }
+
+    patchstudent() : boolean {
+      return true;
+    }
+
     product() : boolean {
       return true;
     }
 
+    patchproduct() : boolean {
+      return true;
+    }
+
     meeting() : boolean {
+      return true;
+    }
+
+    patchmeeting() : boolean {
       return true;
     }
 

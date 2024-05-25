@@ -11,15 +11,30 @@ export class ProdController {
   stundent(@Body() data: CreateProdDto) : boolean {
     return this.prodService.student();
   }
-
+  
+  @Patch()
+  studentchange(@Body() data : UpdateProdDto) : boolean {
+    return this.prodService.patchstudent()
+  }
+ 
   @Post()
   product(@Body() data: CreateProdDto) : boolean {
     return this.prodService.product();
   }
 
+  @Patch()
+  productchange(@Body() data : UpdateProdDto) : boolean {
+    return this.prodService.patchproduct()
+  }
+
   @Post()
   meeting(@Body() data: CreateProdDto) : boolean {
     return this.prodService.meeting();
+  }
+
+  @Patch()
+  meetingchange(@Body() data : UpdateProdDto) : boolean {
+    return this.prodService.patchmeeting()
   }
 
 
