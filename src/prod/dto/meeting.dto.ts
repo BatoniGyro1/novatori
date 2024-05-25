@@ -1,4 +1,4 @@
-import { IsDate, IsString, Max, Min } from "class-validator";
+import { IsDate, IsString, Max, Min, ValidateNested } from "class-validator";
 import { CreateProdDto } from "./create-prod.dto";
 import { Type } from "class-transformer";
 
@@ -15,6 +15,7 @@ export class meeting {
     @Type(() => CreateProdDto)
     mentor: CreateProdDto
 
+    @ValidateNested({each:true})
     @Type(() => CreateProdDto)
     students: CreateProdDto[];
 }
